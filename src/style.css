@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #222222;
-  background-color: #F8F8F8;
+  background-color: #fcfcfc;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,8 +17,11 @@
   -webkit-text-size-adjust: 100%;
 
   --content-color: #000000;
-  --title-color: #4B2EA1;
-  /* --sub-bg-color: #4f4f4f; */
+  --title-color: #377d61;
+  --sub-color: #377d61;
+  --hover-color: #579D81;
+  --sub-bg-color: #fcfcfc;
+  --shadow-color: hsla(226, 20%, 63%, 0.3);
 }
 
 /* :root[color-scheme="light"] {
@@ -36,18 +42,33 @@
   --shadow-color: hsla(226, 20%, 63%, 0.3);
 } */
 
+::selection {
+  background: var(--shadow-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--sub-color);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--hover-color);
 }
 
+html,
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  display: flex;
+  padding: 0;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -61,8 +82,15 @@ h1 {
 main {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main p {
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -81,6 +109,100 @@ main {
 
 .work-in-progress {
   color: #888;
+}
+
+main > a:hover,
+section a:hover {
+  filter: saturate(150%);
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+section > h2 {
+  margin: 0.5em 0;
+  font-size: clamp(1rem, 6vw, 2.4rem);
+  text-align: center;
+  font-family: var(--title-font);
+}
+
+/* section > p {
+    color: var(--content-color);
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    text-align: center;
+    margin-top: 0.5em;
+    font-weight: normal;
+    font-family: var(--subtitle-font);
+} */
+
+section > a {
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid img {
+  width: 100%;
+  filter: saturate(10%) hue-rotate(-30deg);
+  transition: 0.6s all;
+  border-radius: 1rem;
+}
+
+.grid img:hover {
+  filter: none;
+  translate: 0 -0.5rem;
+}
+
+.grid img:active {
+  translate: 0 0;
+}
+
+.project > p {
+  font-family: var(--subtitle-font);
+  color: var(--content-color);
+  padding: 0 1.5rem;
+}
+
+.project > p a {
+  color: var(--accent-color);
+}
+
+/* mentor */
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.partners img {
+  margin: 1rem 0;
+  width: 80px;
+  filter: saturate(10%) hue-rotate(-30deg);
+  transition: 0.6s all;
+  border-radius: 1rem;
+}
+
+.partners img:hover {
+  filter: none;
+  translate: 0 -0.5rem;
+}
+
+.partners img:active {
+  translate: 0 0;
+}
+
+#endpoint {
+  padding-bottom: 7rem;
 }
 
 footer {
@@ -102,24 +224,24 @@ footer > a {
   align-items: center;
   border-radius: 50%;
   justify-content: center;
-  background-color: var(--sub-bg-color);
 }
 
 @media (max-width: 600px) {
   footer > a {
-      width: 3.4rem;
-      height: 3.4rem;
-      padding: 0.8em;
+    width: 3.4rem;
+    height: 3.4rem;
+    padding: 0.8em;
   }
 }
 
 footer > a:hover {
   opacity: 1;
   margin-top: -0.5rem;
+  background-color: var(--title-color);
 }
 
 footer > a:hover path {
-  fill: var(--title-color);
+  fill: var(--sub-bg-color);
 }
 
 footer > a:active {
@@ -130,4 +252,47 @@ footer > a:active {
 
 footer > a:not(:last-child) {
   margin-right: 0.8rem;
+}
+
+/* Animations */
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main > div {
+  opacity: 0;
+  animation: 0.5s appear ease-in-out forwards;
+}
+
+main > h1 {
+  opacity: 0;
+  animation: 0.5s appear ease-in-out forwards 0.2s;
+}
+
+main > h2 {
+  opacity: 0;
+  animation: 0.5s appear ease-in-out forwards 0.4s;
+}
+
+main > p {
+  opacity: 0;
+  animation: 0.5s appear ease-in-out forwards 0.5s;
+}
+
+main > a {
+  opacity: 0;
+  animation: 0.5s appear ease-in-out forwards 0.6s;
+}
+
+footer > * {
+  opacity: 0;
+  animation: 0.5s appear ease-in-out forwards
+    calc(var(--footer-index, 0) * 0.1s + 0.8s);
 }
