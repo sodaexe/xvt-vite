@@ -19,7 +19,7 @@
   --content-color: #000000;
   --title-color: #377d61;
   --sub-color: #377d61;
-  --hover-color: #579D81;
+  --hover-color: #5CA286;
   --sub-bg-color: #fcfcfc;
   --shadow-color: hsla(226, 20%, 63%, 0.3);
 }
@@ -92,19 +92,6 @@ main {
 main p {
   margin-bottom: 3rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
 }
 
 .work-in-progress {
@@ -224,6 +211,7 @@ footer > a {
   align-items: center;
   border-radius: 50%;
   justify-content: center;
+  background-color: var(--title-color);
 }
 
 @media (max-width: 600px) {
@@ -237,7 +225,6 @@ footer > a {
 footer > a:hover {
   opacity: 1;
   margin-top: -0.5rem;
-  background-color: var(--title-color);
 }
 
 footer > a:hover path {
