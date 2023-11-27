@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  --bg-color: #4B2EA1;
+  --main-color: #FCFCFC;
+  --content-color: #000000;
+  --sub-color: #F9E893;
+  --hover-color: #EFBD4C;
+  --shadow-color: hsla(226, 20%, 63%, 0.3);
+  --accent-color: #4B2EA1;
+  
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #222222;
-  background-color: #fcfcfc;
+  background-color: var(--main-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
-  --content-color: #000000;
-  --title-color: #377d61;
-  --sub-color: #377d61;
-  --hover-color: #5CA286;
-  --sub-bg-color: #fcfcfc;
-  --shadow-color: hsla(226, 20%, 63%, 0.3);
 }
 
 /* :root[color-scheme="light"] {
@@ -72,6 +72,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg-color);
 }
 
 h1 {
@@ -87,6 +88,7 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  color: var(--main-color);
 }
 
 main p {
@@ -94,11 +96,7 @@ main p {
   text-align: center;
 }
 
-.work-in-progress {
-  color: #888;
-}
-
-main > a:hover,
+/* main > a:hover, */
 section a:hover {
   filter: saturate(150%);
 }
@@ -211,7 +209,7 @@ footer > a {
   align-items: center;
   border-radius: 50%;
   justify-content: center;
-  background-color: var(--title-color);
+  background-color: var(--bg-color);
 }
 
 @media (max-width: 600px) {
@@ -228,7 +226,7 @@ footer > a:hover {
 }
 
 footer > a:hover path {
-  fill: var(--sub-bg-color);
+  fill: var(--hover-color);
 }
 
 footer > a:active {
