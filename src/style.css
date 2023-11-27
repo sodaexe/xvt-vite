@@ -97,17 +97,12 @@ main button {
   border-radius: 1rem;
   border: 1px solid var(--sub-color);
   background-color: var(--bg-color);
-  
 }
 
 main button:hover {
   color: var(--hover-color);
   border: 1px solid var(--hover-color);
   background-color: #432699;
-}
-
-section a:hover {
-  filter: saturate(150%);
 }
 
 section {
