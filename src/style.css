@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
 :root {
-  --bg-color: #4B2EA1;
-  --main-color: #FCFCFC;
+  --bg-color: #4b2ea1;
+  --main-color: #fcfcfc;
   --content-color: #000000;
-  --sub-color: #F9E893;
-  --hover-color: #EFBD4C;
+  --sub-color: #f9e893;
+  --hover-color: #efbd4c;
   --shadow-color: hsla(226, 20%, 63%, 0.3);
-  --accent-color: #4B2EA1;
-  
+  --accent-color: #4b2ea1;
+
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -77,7 +77,11 @@ body {
 
 h1 {
   font-size: 3.2em;
-  line-height: 1;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 2rem;
 }
 
 main {
@@ -125,8 +129,12 @@ section > h2 {
 } */
 
 section > a {
-    display: inline-block;
-    padding: 0.5rem 0.8rem;
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+}
+
+#mentor a {
+  color: var(--accent-color);
 }
 
 .grid {
@@ -172,13 +180,12 @@ section > a {
 .partners img {
   margin: 1rem 0;
   width: 80px;
-  filter: saturate(10%) hue-rotate(-30deg);
   transition: 0.6s all;
   border-radius: 1rem;
 }
 
 .partners img:hover {
-  filter: none;
+  /* filter: saturate(10%) hue-rotate(-30deg); */
   translate: 0 -0.5rem;
 }
 
