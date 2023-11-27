@@ -4,6 +4,7 @@
   --bg-color: #4b2ea1;
   --main-color: #fcfcfc;
   --content-color: #000000;
+  --sub-content-color: #222222;
   --sub-color: #f9e893;
   --hover-color: #efbd4c;
   --shadow-color: hsla(226, 20%, 63%, 0.3);
@@ -14,7 +15,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #222222;
+  color: var(--content-color);
   background-color: var(--main-color);
 
   font-synthesis: none;
@@ -23,24 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-/* :root[color-scheme="light"] {
-  --bg-color: #f3ecdc;
-  --sub-bg-color: #e0d4b9;
-  --accent-color: #f3af11;
-  --title-color: #3f3f3f;
-  --content-color: #000000;
-  --shadow-color: hsl(227, 40%, 51%, 0.3);
-}
-
-:root[color-scheme="dark"] {
-  --bg-color: #21201e;
-  --sub-bg-color: #36342e;
-  --accent-color: #f9d277;
-  --title-color: #eeeeee;
-  --content-color: #ffffff;
-  --shadow-color: hsla(226, 20%, 63%, 0.3);
-} */
 
 ::selection {
   background: var(--shadow-color);
@@ -86,6 +69,7 @@ h2 {
 
 h3 {
   color: var(--accent-color);
+  font-size: clamp(1rem, 3vw, 2rem);
 }
 
 main {
@@ -108,8 +92,8 @@ main button {
   padding: 0.8rem 2rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  color: var(--sub-color);
   font-weight: 500;
+  color: var(--sub-color);
   border-radius: 1rem;
   border: 1px solid var(--sub-color);
   background-color: var(--bg-color);
@@ -145,8 +129,8 @@ section > a {
   padding: 0.5rem 0.8rem;
 }
 
-/* Mentor */
-#mentor a {
+/* Presentation */
+#presentation a {
   color: var(--accent-color);
 }
 
@@ -207,11 +191,18 @@ section > a {
 }
 
 .workshop p {
-  color: #4D4D4D;
+  color: #444444;
 }
 
 #endpoint {
-  padding-bottom: 7rem;
+  max-width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 8rem;
+  color: var(--main-color);
+  font-size: 0.8rem;
+  background-color: var(--sub-content-color);
+  display: flex;
+  justify-content: center;
 }
 
 footer {
