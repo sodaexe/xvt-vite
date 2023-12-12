@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Willa - introduction AWS</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      a {
+        color: #4d4d4d;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        padding: 0.5rem 1rem;
+        background-color: #4b2ea1;
+        color: #ffffff;
+      }
+
+      main {
+        max-width: 900px;
+        margin: auto;
+        padding: 2rem 4rem;
+      }
+
+      main img {
+        width: 90%;
+        margin: auto;
+      }
+
+      footer {
+        display: flex;
+        max-width: 900px;
+        margin: 0 auto 3rem;
+        padding: 0.5rem 1rem;
+        background-color: #f9e893;
+        border-radius: 10px;
+        align-items: center;
+      }
+
+      footer img {
+        display: flex;
+        width: 80%;
+        align-items: center;
+      }
+
+      .information {
+        display: flex;
+        background-color: #e9e9e9;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+
+      .information > div {
+        padding-right: 1rem;
+        font-size: 1.5rem;
+      }
+      .information > p {
+        margin: 0;
+      }
+
+      .fake-button {
+        padding: 0.3rem 0.6rem;
+        color: #4d4d4d;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+        font-size: 0.9em;
+      }
+
+      .signature > p {
+        margin: 0;
+      }
+
+      .subtitle {
+        margin: 0;
+        font-size: 0.9em;
+        color: #4d4d4d;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>🥐 Willa - AWS HDS prise en main</h1>
+        <sub>Article du 12.12.2023</sub>
+        <div class="information">
+          <div>ℹ️</div>
+          <p>
+            Cette page est pour les startups incubées au sein de Willa qui
+            souhaitent ouvrir un compte AWS car elles sont soumises à des normes
+            spécifiques (gestion de données sensibles)
+          </p>
+        </div>
+        <p>
+          AWS appartient à Amazon et est l'un des plus gros service
+          d'hébergement au monde. Il est aujourd'hui certifié HDS (Hébergeur de
+          Données de Santé).
+        </p>
+        <p>
+          A noter que l'hébergement d'un site, d'une app doit absolument être
+          fait au sein de serveurs européens si l'on traite des données
+          sensibles. <br />
+          Et la base de données doit, en plus d'être hébergée en Europe, être
+          sur un serveur HDS. <br />
+        </p>
+        <p>
+          Plus d'information sur le HDS sur cet article :
+          <a
+            href="https://esante.gouv.fr/labels-certifications/hds/certification-des-hebergeurs-de-donnees-de-sante"
+            target="_blank"
+            >https://esante.gouv.fr/labels-certifications/hds/certification-des-hebergeurs-de-donnees-de-sante</a
+          >
+        </p>
+      </section>
+      <section>
+        <h2>Création de compte AWS</h2>
+        <p>
+          Relevez vos manches, gardez votre carte bancaire et téléphone à côté
+          de vous car c'est plusieurs étapes de validation qu'il faudra passer
+          avant d'accéder à sa page d'administration AWS 😬
+        </p>
+        <ol>
+          <li>
+            <a href="https://aws.amazon.com/fr/free/" target="_blank"
+              >https://aws.amazon.com/fr/free/</a
+            >
+          </li>
+          <li>Se créer un compte</li>
+          <li>
+            ❗️ Attention, AWS demande de saisir des données bancaires (sans le
+            code CVV/CVC). <br />
+            Pour confirmer l'association de votre compte bancaire dans les
+            situations où un remboursement est dû, un prélèvement symbolique de
+            1 euro sera effectué.
+          </li>
+          <li>
+            Vous allez passer par des étapes de saisies d'informations
+            personnelles (de l'associé.e qui sera en charge du compte)
+          </li>
+          <li>
+            Vous terminerez par un KYC : un appel automatisé sera effectué sur
+            le numéro que vous aurez renseigné. Durant cet appel, il vous sera
+            demandé de saisir sur votre téléphone le code qui apparaîtra à
+            l'écran.
+          </li>
+        </ol>
+        <p>La formule qui vous intéressera est gratuite durant 12 mois :</p>
+        <img src="screenshots/first-subscription.png" alt="Forfaits AWS" />
+        <p>🚀 BRAVO ! Vous avez dorénavant accès à votre Dashboard.</p>
+        <p>
+          Attention, ce n'est pas forcément évident à prendre en main, vous
+          pouvez demander de l'aide à votre dev ou me solliciter pour un autre
+          article tutoriel 😬
+        </p>
+      </section>
+      <section>
+        <h2>Prise en main</h2>
+        <p>
+          Pour commencer à créer sa première application, cliquez le bouton
+          <span class="fake-button">Créer une application</span> dans le cadre
+          “Applications” à droite (ou sur le bouton sur la bannière bleue)
+        </p>
+        <img src="screenshots/console-manager.png" alt="Accueil AWS" />
+        <p>
+          ❗️ Attention, vérifiez bien que vous êtes sur Paris. <br />
+          Dans l'exemple ci-dessus, si vous jetez un oeil au menu du haut (la
+          bande noir/sombre), je suis située à Stockholm 🤪 Il faut tout
+          simplement cliquer sur la liste déroulante pour sélectionner
+          <span class="fake-button">Paris</span>
+        </p>
+      </section>
+      <section>
+        <h2>Ensuite ?</h2>
+        <p>
+          A partir du stade ci-dessous, si vous n'êtes pas sûr.e de vous, je
+          vous recommande fortement de le faire avec une personne Tech 😉
+        </p>
+        <img
+          src="screenshots/application-details.png"
+          alt="Fenêtre de création d'application"
+        />
+        <p>En espérant vous avoir aidé sur ces premiers pas !</p>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <img src="/public/assets/xvt-logo.png" alt="xvt logo" />
+      </div>
+      <div class="signature">
+        <p>Xuan-Vi Tran</p>
+        <p class="subtitle">Experte IT Willa</p>
+      </div>
+    </footer>
+  </body>
+</html>
