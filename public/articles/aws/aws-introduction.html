@@ -27,6 +27,18 @@
         color: #ffffff;
       }
 
+      header {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9em;
+        background-color: #222222;
+        color: #e9e9e9;
+      }
+
+      header a {
+        color: #e9e9e9;
+        text-decoration: none;
+      }
+
       main {
         max-width: 900px;
         margin: auto;
@@ -46,6 +58,15 @@
         background-color: #f9e893;
         border-radius: 10px;
         align-items: center;
+      }
+
+      footer a {
+        color: #222222;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
       }
 
       footer img {
@@ -89,6 +110,9 @@
     </style>
   </head>
   <body>
+    <header>
+      <div><a href="/" target="_self">Revenir à la home</a></div>
+    </header>
     <main>
       <section>
         <h1>🥐 Willa - AWS HDS prise en main</h1>
@@ -197,7 +221,7 @@
         <img src="/public/assets/xvt-logo.png" alt="xvt logo" />
       </div>
       <div class="signature">
-        <p>Xuan-Vi Tran</p>
+        <p><a href="https://www.linkedin.com/in/xuan-vi-tran-40418935/" target="_blank">Xuan-Vi Tran</a></p>
         <p class="subtitle">Experte IT Willa</p>
       </div>
     </footer>
