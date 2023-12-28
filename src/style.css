@@ -83,6 +83,10 @@ main {
   color: var(--main-color);
 }
 
+main > h1 {
+  text-align: center;
+}
+
 main p {
   margin-bottom: 3rem;
   text-align: center;
