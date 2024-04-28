@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
 :root {
-  --bg-color: #4b2ea1;
+  --bg-color: #6948C7;
   --main-color: #fcfcfc;
   --content-color: #000000;
   --sub-content-color: #222222;
-  --sub-color: #f9e893;
+  --sub-color: #FFEB81;
   --hover-color: #efbd4c;
   --shadow-color: hsla(226, 20%, 63%, 0.3);
   --accent-color: #4b2ea1;
@@ -60,11 +60,8 @@ body {
 
 h1 {
   font-size: 3.2em;
+  font-weight: bolder;
   margin: 0;
-}
-
-h2 {
-  margin-bottom: 2rem;
 }
 
 h3 {
@@ -90,23 +87,23 @@ main > h1 {
 main p {
   margin-bottom: 3rem;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 main button {
   padding: 0.8rem 2rem;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  font-weight: 500;
-  color: var(--sub-color);
-  border-radius: 1rem;
+  font-weight: 800;
+  color: var(--content-color);
   border: 1px solid var(--sub-color);
-  background-color: var(--bg-color);
+  border-radius: 1rem;
+  background-color: var(--sub-color);
 }
 
 main button:hover {
-  color: var(--hover-color);
-  border: 1px solid var(--hover-color);
-  background-color: #432699;
+  color: var(--sub-color);
+  background-color: var(--bg-color);
 }
 
 section {
@@ -136,13 +133,12 @@ section > a {
 .partners {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.2rem;
   justify-content: center;
 }
 
 .partners img {
-  margin: 1rem 0;
-  width: 80px;
+  width: 6rem;
   transition: 0.6s all;
   border-radius: 1rem;
 }
