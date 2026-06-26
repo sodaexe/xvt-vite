@@ -63,6 +63,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  text-align: center;
+}
+
 h3 {
   color: var(--accent-color);
   font-size: clamp(1.1rem, 1.8vw, 2rem);
